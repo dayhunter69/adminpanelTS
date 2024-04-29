@@ -1,4 +1,5 @@
-@import "mixin";
+@import 'mixin';
+@import 'dashboard';
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -28,7 +29,7 @@ a {
   color: rgb(0, 195, 0);
 }
 
-.adminContainer {
+.admin-container {
   @include grid(1fr 4fr, 2rem);
   height: 100vh;
   background-color: rgb(247, 247, 247);
@@ -38,6 +39,8 @@ a {
     padding: 1rem;
     z-index: 10;
     overflow-y: auto;
+    box-shadow: 0px 3.2px 7.2px 0px #00000021, 0px 0.6px 1.8px 0px #0000001a;
+    z-index: 10;
     &::-webkit-scrollbar {
       display: none;
     }

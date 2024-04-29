@@ -1,11 +1,13 @@
-import AdminSidebar from "../components/AdminSidebar";
+import AdminSidebar from '../components/AdminSidebar';
 
 const Products = () => {
   return (
-    <div className="adminContainer">
+    <div className="admin-container">
       <AdminSidebar />
 
-      <main>asdads</main>
+      <main className="dashboard">
+        <div className="bar">asd</div>
+      </main>
     </div>
   );
 };
