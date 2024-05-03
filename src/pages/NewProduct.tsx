@@ -3,6 +3,7 @@ import AdminSidebar from '../components/AdminSidebar';
 import TableHOC from '../components/TableHOC';
 import { Column } from 'react-table';
 import { Link } from 'react-router-dom';
+import { FaPlus } from 'react-icons/fa';
 
 interface DataType {
   photo: ReactElement;
@@ -95,7 +96,13 @@ const arr: DataType[] = [
 const Products = () => {
   const [data] = useState<DataType[]>(arr);
   const Table = useCallback(
-    TableHOC<DataType>(columns, data, 'dashboard-product-box', 'Products'),
+    TableHOC<DataType>(
+      columns,
+      data,
+      'dashboard-product-box',
+      'Products',
+      true
+    ),
     []
   );
   return (
@@ -103,6 +110,9 @@ const Products = () => {
       <AdminSidebar />
 
       <main>{Table()}</main>
+      <Link to="/admin/product/new" className="create-product-btn">
+        <FaPlus />
+      </Link>
     </div>
   );
 };
