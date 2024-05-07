@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import Loader from './components/Loader';
-import NewProduct from './pages/NewProduct';
+import NewProduct from './pages/management/NewProduct';
 import ProductManagement from './pages/management/ProductManagement';
 import TransactionManagement from './pages/management/TransactionManagement';
 
 const Dashboard = lazy(() => import('./pages/Dashboard'));
-const Products = lazy(() => import('./pages/NewProduct'));
+const Products = lazy(() => import('./pages/Products'));
 const Transaction = lazy(() => import('./pages/Transaction'));
 const Customers = lazy(() => import('./pages/Customers'));
 const App = () => {

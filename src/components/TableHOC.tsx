@@ -78,11 +78,11 @@ function TableHOC<T extends NonNullable<unknown>>(
           </tbody>
         </table>
         {showPagination && (
-          <div>
+          <div className="table-pagination">
             <button disabled={!canPreviousPage} onClick={previousPage}>
               Prev
             </button>
-            <span>{`${pageIndex + 1} Page of ${pageCount}`}</span>
+            <span>{`${pageIndex + 1} of ${pageCount}`}</span>
             <button disabled={!canNextPage} onClick={nextPage}>
               Next
             </button>
